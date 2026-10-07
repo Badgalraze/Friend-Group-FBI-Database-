@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>🕵️ Friend Group FBI Database</title>
+
+<style>
+
+body{
+background:#0f172a;
+color:white;
+font-family:Arial;
+padding:30px;
+text-align:center;
+}
+
+.container{
+max-width:800px;
+margin:auto;
+}
+
+h1{
+color:#00ff99;
+}
+
+input{
+padding:12px;
+width:250px;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:12px 20px;
+background:#00ff99;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+}
+
+#result{
+margin-top:30px;
+padding:20px;
+background:#1e293b;
+border-radius:15px;
+white-space:pre-line;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🕵️ FRIEND GROUP FBI DATABASE</h1>
+
+<p>
+Enter a name to access classified records.
+</p>
+
+<input
+id="nameInput"
+placeholder="Enter Subject Name">
+
+<button onclick="scanFile()">
+ACCESS FILE
+</button>
+
+<div id="result">
+
+Awaiting Subject...
+
+</div>
+
+</div>
+
+<script>
+
+function scanFile(){
+
+const name =
+document.getElementById("nameInput")
+.value
+.trim()
+.toLowerCase();
+
+const result =
+document.getElementById("result");
+
+if(
+name==="aze" ||
+name==="azel" ||
+name==="zel" ||
+name==="anna" ||
+name==="batang galit"
+){
+
+result.innerHTML =
+
+"👑 VIP FILE\\n\\n" +
+
+"Beauty: 100%\\n" +
+
+"Competence: 97%\\n" +
+
+"Coffee Dependency: 12%\\n\\n" +
+
+"Final Verdict:\\n" +
+
+"Built Different.";
+
+return;
+}
+
+if(name==="dan"){
+
+result.innerHTML =
+
+"🚨 DAN FILE\\n\\n" +
+
+"Patience: 2%\\n" +
+
+"Drama Level: 95%\\n" +
+
+"Binary Thinking: 100%\\n\\n" +
+
+"Known Weakness:\\n" +
+
+"Being told to calm down.\\n\\n" +
+
+"Final Verdict:\\n" +
+
+"Already typing a response.";
+
+return;
+}
+
+const crimes = [
+
+"Opened fridge repeatedly without eating.",
+
+"Left messages on read.",
+
+"Started task 5 minutes before deadline.",
+
+"Forgot why room was entered.",
+
+"Opened Teams and lost motivation.",
+
+"Re-read same email six times.",
+
+"Used 'I'll do it tomorrow'.",
+
+"Started side quest before finishing main task."
+
+];
+
+const achievements = [
+
+"🏆 Olympic Procrastinator",
+
+"☕ Coffee Powered Human",
+
+"📱 Full-Time Screenshot Collector",
+
+"🎭 Drama Consultant",
+
+"🚀 Surviving On Vibes",
+
+"💼 Meeting Survivor"
+
+];
+
+const verdicts = [
+
+"Technically functional.",
+
+"Running on caffeine and hope.",
+
+"Needs supervision.",
+
+"Surprisingly productive today.",
+
+"Probably tired.",
+
+"One inconvenience away from annual leave."
+
+];
+
+let crime =
+crimes[Math.floor(Math.random()*crimes.length)];
+
+let achievement =
+achievements[Math.floor(Math.random()*achievements.length)];
+
+let verdict =
+verdicts[Math.floor(Math.random()*verdicts.length)];
+
+result.innerHTML =
+
+"📋 SUBJECT FILE\\n\\n" +
+
+"Achievement:\\n" +
+
+achievement +
+
+"\\n\\nCrime:\\n" +
+
+crime +
+
+"\\n\\nFinal Verdict:\\n" +
+
+verdict;
+
+}
+
+</script>
+
+</body>
+
+</html>
