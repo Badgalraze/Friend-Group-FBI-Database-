@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
+<meta charset="UTF-8">
 <title>🕵️ Friend Group FBI Database</title>
 
 <style>
@@ -10,9 +9,10 @@
 body{
 background:#0f172a;
 color:white;
-font-family:Arial;
-padding:30px;
+font-family:Arial,sans-serif;
 text-align:center;
+padding:40px;
+margin:0;
 }
 
 .container{
@@ -26,7 +26,7 @@ color:#00ff99;
 
 input{
 padding:12px;
-width:250px;
+width:280px;
 border:none;
 border-radius:10px;
 }
@@ -46,10 +46,10 @@ padding:20px;
 background:#1e293b;
 border-radius:15px;
 white-space:pre-line;
+text-align:left;
 }
 
 </style>
-
 </head>
 
 <body>
@@ -58,9 +58,7 @@ white-space:pre-line;
 
 <h1>🕵️ FRIEND GROUP FBI DATABASE</h1>
 
-<p>
-Enter a name to access classified records.
-</p>
+<p>Night Shift Employee Investigation Bureau</p>
 
 <input
 id="nameInput"
@@ -71,9 +69,7 @@ ACCESS FILE
 </button>
 
 <div id="result">
-
-Awaiting Subject...
-
+Awaiting subject...
 </div>
 
 </div>
@@ -91,6 +87,11 @@ document.getElementById("nameInput")
 const result =
 document.getElementById("result");
 
+result.innerHTML =
+"🔍 Accessing Classified Records...";
+
+setTimeout(function(){
+
 if(
 name==="aze" ||
 name==="azel" ||
@@ -99,119 +100,109 @@ name==="anna" ||
 name==="batang galit"
 ){
 
+const vip = [
+
+"👑 VIP FILE\n\nBeauty Score: 100%\nCompetence: 97%\nCoffee Dependency: 12%\n\nFinal Verdict:\nBuilt Different.",
+
+"🏆 EXECUTIVE FILE\n\nProblem Solving: 98%\nFriend Group Importance: Critical\n\nFinal Verdict:\nKeeps the operation running.",
+
+"💎 CLASSIFIED REPORT\n\nWeaknesses:\nStill Searching...\n\nFinal Verdict:\nToo iconic to roast.",
+
+"🌸 FRIEND GROUP EVALUATION\n\nBeauty Level: Ridiculous\nCompetence: Suspiciously High\n\nFinal Verdict:\nProtected Individual."
+
+];
+
 result.innerHTML =
-
-"👑 VIP FILE\\n\\n" +
-
-"Beauty: 100%\\n" +
-
-"Competence: 97%\\n" +
-
-"Coffee Dependency: 12%\\n\\n" +
-
-"Final Verdict:\\n" +
-
-"Built Different.";
+vip[Math.floor(Math.random()*vip.length)];
 
 return;
 }
 
 if(name==="dan"){
 
-const danRoasts = [
+const dan = [
 
-"🚨 DAN FILE\n\nDrama Level: 95%\nPatience: 2%\n\nStatus: Already annoyed.",
+"🚨 DAN FILE\n\nDrama Level: 95%\nPatience: 2%\n\nFinal Verdict:\nAlready typing a response.",
 
-"📂 CLASSIFIED\n\nBinary Thinking: 100%\nMiddle Ground: Not Found.",
+"⚠️ CLASSIFIED\n\nBinary Thinking: 100%\nMiddle Ground: Not Found.",
 
-"⚠️ DAN REPORT\n\nKnown Weakness:\nBeing told to calm down.",
+"📣 SPECIAL REPORT\n\nSpecial Ability:\nPreparing rebuttals before hearing arguments.",
 
-"📣 SPECIAL ABILITY\n\nPreparing rebuttals before hearing arguments.",
+"🎭 INCIDENT REPORT\n\nKnown Weakness:\nBeing told to calm down.",
 
-"🚨 THREAT ASSESSMENT\n\nEmotionally activated.",
-
-"🧠 WORKPLACE REVIEW\n\nAsked for feedback.\nRejected feedback.\nCycle complete.",
-
-"📊 ANALYSIS\n\nHas already disagreed with this report.",
-
-"🎭 DRAMA REPORT\n\nCan turn a joke into a debate.",
-
-"📚 CLASSIFIED FILE\n\nCould argue with a fortune cookie.",
-
-"⚡ CURRENT STATUS\n\nTyping..."
+"🧠 FINAL ASSESSMENT\n\nSubject has already disagreed with this report."
 
 ];
 
 result.innerHTML =
-danRoasts[
-Math.floor(Math.random()*danRoasts.length)
-];
-
-return;
-}
-
-result.innerHTML =
-
-"🚨 DAN FILE\\n\\n" +
-
-"Patience: 2%\\n" +
-
-"Drama Level: 95%\\n" +
-
-"Binary Thinking: 100%\\n\\n" +
-
-"Known Weakness:\\n" +
-
-"Being told to calm down.\\n\\n" +
-
-"Final Verdict:\\n" +
-
-"Already typing a response.";
+dan[Math.floor(Math.random()*dan.length)];
 
 return;
 }
 
 const crimes = [
 
-"Opened fridge 6 times without eating.",
+"Opened fridge repeatedly without eating.",
 
-"Started a task 5 minutes before deadline.",
+"Started task 5 minutes before deadline.",
 
 "Pretended Teams was loading.",
 
+"Forgot why browser tab existed.",
+
 "Opened email and immediately regretted it.",
-
-"Left messages unread for tactical reasons.",
-
-"Started a side quest during main quest.",
-
-"Entered room and forgot objective.",
-
-"Used 'I'll do it tomorrow' again.",
-
-"Opened Excel and lost motivation.",
 
 "Survived meeting without paying attention.",
 
-"Re-read same email five times.",
-
-"Opened TikTok during break and returned 2 hours later.",
-
-"Forgot why browser tab existed.",
-
 "Used coffee as emotional support.",
 
-"Created to-do list and ignored it.",
+"Started side quest before finishing main task.",
 
-"Moved task instead of finishing it.",
+"Opened Excel and lost motivation.",
 
-"Started cleaning to avoid work.",
+"Left work chat unread for tactical reasons.",
 
-"Checked fridge for new content.",
+"Checked fridge looking for new content.",
 
 "Opened shopping app with no money.",
 
-"Responded 'working on it' while still investigating."
+"Read same email six times.",
+
+"Spent 20 minutes looking for phone while holding it.",
+
+"Promised to sleep early. Did not.",
+
+"Opened TikTok during break and returned much later."
+
+];
+
+const coffee = [
+
+"Coffee Dependency: 98%\nBlood Type: Americano.",
+
+"Coffee Dependency: 65%\nFunctional until 3AM.",
+
+"Coffee Machine Loyalty Status: Platinum.",
+
+"Subject drinks coffee before drinking coffee.",
+
+"Coffee Dependency: 21%\nSuspiciously functional."
+
+];
+
+const sleep = [
+
+"Sleep Obtained: 4 Hours\nStatus: Surprisingly alive.",
+
+"Recovery Sleep After Shift: 12 Hours.",
+
+"Subject clocked out and immediately entered hibernation.",
+
+"Sleep Debt: Severe.",
+
+"Appeared awake during shift.\nEvidence inconclusive.",
+
+"Functioning entirely through stubbornness."
 
 ];
 
@@ -221,117 +212,86 @@ const achievements = [
 
 "☕ Coffee Powered Human",
 
-"💀 Walking Chaos Generator",
-
-"📱 Full-Time Screenshot Collector",
-
-"🚀 Surviving On Pure Vibes",
-
-"🎭 Drama Consultant",
-
-"💼 Meeting Survivor",
-
-"📣 Professional Excuse Engineer",
-
-"🧠 Occasional Genius",
-
-"🏅 Shift Warrior",
-
-"💼 Corporate Gladiator",
-
-"☕ Platinum Coffee Member",
-
-"💤 Recovery Sleep Champion",
-
-"📊 Spreadsheet Survivor",
-
-"🎖️ Escalation Survivor",
-
-"🏆 CEO of Overthinking",
-
-"📱 Notification Addict",
-
-"⚡ Survived Entire Shift Awake",
+"💤 Sleep Recovery Champion",
 
 "🎧 Call Queue Survivor",
 
-"☕ Running On Caffeine"
+"📱 Full-Time Screenshot Collector",
+
+"🏅 Shift Warrior",
+
+"💀 Walking Chaos Generator",
+
+"💼 Meeting Survivor",
+
+"🧠 CEO of Overthinking",
+
+"📣 Professional Excuse Engineer"
 
 ];
 
 const verdicts = [
 
-"Running entirely on caffeine and responsibility.",
-
-"Professional adult. Somehow.",
-
-"Probably needs a day off.",
+"Running on caffeine and responsibility.",
 
 "Technically functioning.",
 
+"Needs a day off.",
+
+"Somehow holding everything together.",
+
 "One inconvenience away from filing leave.",
-
-"Survived through stubbornness.",
-
-"Running on vibes and experience.",
-
-"Still waiting for retirement.",
-
-"Somehow keeping it together.",
-
-"Mentally on leave.",
-
-"Needs coffee before making decisions.",
-
-"Likely harmless but tired.",
-
-"Professional escalator of small problems.",
-
-"Sleep recommended immediately.",
 
 "Night-shift resistant.",
 
-"Running on hope and deadlines.",
+"Mentally on leave.",
 
-"Operational but questionable.",
-
-"Strangely competent.",
-
-"Certified work survivor.",
-
-"Would benefit from a nap."
+"Certified workplace survivor."
 
 ];
 
-let crime =
+const crime =
 crimes[Math.floor(Math.random()*crimes.length)];
 
-let achievement =
+const coffeeReport =
+coffee[Math.floor(Math.random()*coffee.length)];
+
+const sleepReport =
+sleep[Math.floor(Math.random()*sleep.length)];
+
+const achievement =
 achievements[Math.floor(Math.random()*achievements.length)];
 
-let verdict =
+const verdict =
 verdicts[Math.floor(Math.random()*verdicts.length)];
 
 result.innerHTML =
 
-"📋 SUBJECT FILE\\n\\n" +
+"📂 FBI DATABASE FILE\n\n" +
 
-"Achievement:\\n" +
+"SUBJECT: " +
+name.toUpperCase() +
 
+"\n\n🏆 ACHIEVEMENT\n" +
 achievement +
 
-"\\n\\nCrime:\\n" +
+"\n\n☕ COFFEE ANALYSIS\n" +
+coffeeReport +
 
+"\n\n💤 NIGHT SHIFT REPORT\n" +
+sleepReport +
+
+"\n\n🚔 WORKPLACE VIOLATION\n" +
 crime +
 
-"\\n\\nFinal Verdict:\\n" +
-
+"\n\n🏆 FINAL VERDICT\n" +
 verdict;
+
+},1500);
 
 }
 
 </script>
 
 </body>
-
 </html>
